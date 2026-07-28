@@ -491,8 +491,8 @@ nav a:hover {
    when the mouse is placed over it.
 */
 .hero-buttons .primary-button:hover {
-    background-color: #5bc0ff;
-    border-color: #5bc0ff;
+    background-color: #fbfdff;
+    border-color: #fdfdff;
     color: #061a33;
 }
 
@@ -502,8 +502,8 @@ nav a:hover {
    when the mouse is placed over it.
 */
 .hero-buttons .secondary-button:hover {
-    background-color: #5bc0ff;
-    border-color: #5bc0ff;
+    background-color: #fbfdff;
+    border-color: #fbfdff;
     color: #061a33;
 }
 
