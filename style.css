@@ -1,14 +1,9 @@
 /*
    PORTFOLIO WEBSITE STYLES
-   This CSS file controls the colors, spacing, fonts,
-   and appearance of the HTML webpage.
+   Controls the colors, spacing, fonts, and appearance
+   of the portfolio website.
 */
 
-
-/*
-   The body represents all visible webpage content.
-   These settings apply to the entire page.
-*/
 /* Apply these settings to the entire webpage */
 body {
     margin: 0;
@@ -16,6 +11,11 @@ body {
     background-color: #061a33;
     color: white;
     font-family: Arial, sans-serif;
+}
+
+/* Make navigation scrolling smooth */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Style the main name heading */
@@ -35,9 +35,19 @@ p {
     line-height: 1.6;
 }
 
-/* Add space between project-list items */
+/* Add space between list items */
 li {
     margin-bottom: 10px;
+}
+
+/* Add space between the main sections */
+section {
+    margin-bottom: 70px;
+}
+
+/* Style links inside the page */
+section a {
+    color: #5bc0ff;
 }
 
 /* Style the navigation bar */
@@ -54,23 +64,8 @@ nav a {
     font-weight: bold;
 }
 
-/* Change the link color when the mouse is over it */
+/* Change navigation links when hovered */
 nav a:hover {
-    color: #5bc0ff;
-}
-
-/* Add space between the main sections */
-section {
-    margin-bottom: 70px;
-}
-
-/* Make navigation scrolling smooth */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Style links inside the page */
-section a {
     color: #5bc0ff;
 }
 
@@ -81,13 +76,16 @@ section a {
     gap: 25px;
 }
 
-/* Style each individual project card */
+/* Style each project card */
 .project-card {
     width: 280px;
     padding: 25px;
     background-color: #0d2b4d;
     border: 1px solid #245987;
     border-radius: 10px;
+
+    /* Animate the card smoothly when entering and leaving */
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 /* Style the project titles */
@@ -96,11 +94,10 @@ section a {
     color: #5bc0ff;
 }
 
-/* Add an effect when the mouse is over a card */
+/* Move a project card upward when hovered */
 .project-card:hover {
     transform: translateY(-5px);
     border-color: #f2c94c;
-    transition: 0.3s;
 }
 
 /* Style the technologies and skills */
@@ -132,31 +129,9 @@ section a {
     color: #f2c94c;
 }
 
-/* Adjust the text inside the skill cards */
+/* Adjust text inside the skill cards */
 .skill-card p {
     margin-bottom: 0;
-}
-
-/* Adjust the website for phones and small tablets */
-@media (max-width: 700px) {
-
-    body {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .project-card,
-    .skill-card {
-        width: auto;
-    }
 }
 
 /* Style the résumé link as a button */
@@ -227,24 +202,56 @@ section a {
     font-weight: bold;
 }
 
-/* Main button */
+/* Style the View Projects button */
 .primary-button {
     background-color: #f2c94c;
     color: #061a33;
 }
 
-/* Secondary button */
+/* Style the View Résumé button */
 .secondary-button {
     border: 2px solid #5bc0ff;
     color: #5bc0ff;
 }
 
-/* Button hover effects */
+/* Change the View Projects button when hovered */
 .primary-button:hover {
     background-color: #5bc0ff;
+    color: #061a33;
 }
 
+/* Change the View Résumé button when hovered */
 .secondary-button:hover {
     background-color: #5bc0ff;
     color: #061a33;
+}
+
+/* Adjust the website for phones and small tablets */
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .project-card,
+    .skill-card {
+        width: auto;
+    }
 }
