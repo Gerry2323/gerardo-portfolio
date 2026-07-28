@@ -73,3 +73,39 @@ html {
 section a {
     color: #5bc0ff;
 }
+
+/* Arrange the project cards */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Style each individual project card */
+.project-card {
+    width: 280px;
+    padding: 25px;
+    background-color: #0d2b4d;
+    border: 1px solid #245987;
+    border-radius: 10px;
+}
+
+/* Style the project titles */
+.project-card h3 {
+    margin-top: 0;
+    color: #5bc0ff;
+}
+
+/* Add an effect when the mouse is over a card */
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #f2c94c;
+    transition: 0.3s;
+}
+
+/* Style the technologies and skills */
+.project-skills {
+    color: #f2c94c;
+    font-size: 14px;
+    font-weight: bold;
+}
