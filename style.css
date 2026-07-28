@@ -1,10 +1,25 @@
 /*
    PORTFOLIO WEBSITE STYLES
-   Controls the colors, spacing, fonts, and appearance
-   of the portfolio website.
+
+   This file controls the colors, spacing, fonts, cards,
+   buttons, navigation, and mobile layout of the website.
 */
 
-/* Apply these settings to the entire webpage */
+
+/* =========================================================
+   ENTIRE WEBPAGE
+   ========================================================= */
+
+/*
+   Controls everything visible on the webpage.
+
+   Current content affected:
+   - Navigation bar
+   - Hero/About section
+   - Featured Projects
+   - Technical Skills
+   - Contact section
+*/
 body {
     margin: 0;
     padding: 40px;
@@ -13,70 +28,182 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Make navigation scrolling smooth */
+
+/*
+   Makes the webpage scroll smoothly when a navigation link
+   such as About, Projects, Skills, or Contact is selected.
+*/
 html {
     scroll-behavior: smooth;
 }
 
-/* Style the main name heading */
+
+/* =========================================================
+   GENERAL TEXT
+   ========================================================= */
+
+/*
+   Styles the main h1 heading.
+
+   Current text:
+   "Gerardo Luna"
+*/
 h1 {
-    color: #5bc0ff;
+    color: #fcfcfc;
     font-size: 48px;
 }
 
-/* Style the section headings */
+
+/*
+   Styles every main section heading and the professional title.
+
+   Current text affected:
+   - "Mechanical Engineering Student focused on lunar
+      materials, robotics, and manufacturing"
+   - "Featured Projects"
+   - "Technical Skills"
+   - "Contact"
+*/
 h2 {
-    color: #f2c94c;
+    color: #f3f3f3;
 }
 
-/* Make paragraphs easier to read */
+
+/*
+   Styles all regular paragraphs on the website.
+
+   Current text affected:
+   - Hero introduction
+   - Project descriptions
+   - Project technologies and skills
+   - Skill-card descriptions
+   - Contact information
+*/
 p {
     max-width: 700px;
     line-height: 1.6;
 }
 
-/* Add space between list items */
+
+/*
+   Adds space below list items.
+
+   This will affect any <li> items you add later.
+   Your current card layout does not use list items.
+*/
 li {
     margin-bottom: 10px;
 }
 
-/* Add space between the main sections */
+
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
+
+/*
+   Adds space underneath each main website section.
+
+   Current sections affected:
+   - Hero/About
+   - Featured Projects
+   - Technical Skills
+   - Contact
+*/
 section {
     margin-bottom: 70px;
 }
 
-/* Style links inside the page */
+
+/*
+   Gives links located inside sections a blue color.
+
+   Current links affected:
+   - Email
+   - GitHub
+   - LinkedIn
+   - Résumé links
+
+   More specific button rules below override this color
+   for the View Projects and View Résumé buttons.
+*/
 section a {
     color: #5bc0ff;
 }
 
-/* Style the navigation bar */
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+
+/*
+   Arranges the navigation links horizontally with space
+   between them.
+
+   Current links:
+   - About
+   - Projects
+   - Skills
+   - Contact
+*/
 nav {
     display: flex;
     gap: 25px;
     margin-bottom: 50px;
 }
 
-/* Style the navigation links */
+
+/*
+   Styles the text of the navigation links.
+
+   Current text:
+   - "About"
+   - "Projects"
+   - "Skills"
+   - "Contact"
+*/
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Change navigation links when hovered */
+
+/*
+   Changes a navigation link to blue when the mouse
+   is placed over it.
+*/
 nav a:hover {
     color: #5bc0ff;
 }
 
-/* Arrange the project cards */
+
+/* =========================================================
+   PROJECT SECTION
+   ========================================================= */
+
+/*
+   Arranges all project cards in rows.
+
+   Current project cards:
+   - VARCO Lunar Coating Research
+   - NASA Lunabotics
+   - AgAir UAV System
+*/
 .project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
 
-/* Style each project card */
+
+/*
+   Controls the appearance of every project card.
+
+   Current cards affected:
+   - VARCO Lunar Coating Research
+   - NASA Lunabotics
+   - AgAir UAV System
+*/
 .project-card {
     width: 280px;
     padding: 25px;
@@ -84,37 +211,80 @@ nav a:hover {
     border: 1px solid #245987;
     border-radius: 10px;
 
-    /* Animate the card smoothly when entering and leaving */
+    /* Makes the card move smoothly when hovered */
     transition: transform 0.3s, border-color 0.3s;
 }
 
-/* Style the project titles */
+
+/*
+   Styles the h3 title inside every project card.
+
+   Current text:
+   - "VARCO Lunar Coating Research"
+   - "NASA Lunabotics"
+   - "AgAir UAV System"
+*/
 .project-card h3 {
     margin-top: 0;
     color: #5bc0ff;
 }
 
-/* Move a project card upward when hovered */
+
+/*
+   Moves a project card upward and changes its border
+   to gold when the mouse is placed over it.
+*/
 .project-card:hover {
     transform: translateY(-5px);
     border-color: #f2c94c;
 }
 
-/* Style the technologies and skills */
+
+/*
+   Styles the technologies listed at the bottom
+   of each project card.
+
+   Current text affected:
+   - "Materials Research • Vacuum Plasma Spray • Python"
+   - "Robotics • Mechanical Design • Project Management"
+   - "UAV Systems • Sensors • Systems Engineering"
+*/
 .project-skills {
     color: #f2c94c;
     font-size: 14px;
     font-weight: bold;
 }
 
-/* Arrange the skill cards */
+
+/* =========================================================
+   TECHNICAL SKILLS SECTION
+   ========================================================= */
+
+/*
+   Arranges the technical skill cards in rows.
+
+   Current skill cards:
+   - Programming
+   - Engineering
+   - Research
+   - Development Tools
+*/
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Style each skill card */
+
+/*
+   Controls the appearance of each technical skill card.
+
+   Current cards affected:
+   - Programming
+   - Engineering
+   - Research
+   - Development Tools
+*/
 .skill-card {
     width: 220px;
     padding: 20px;
@@ -123,18 +293,46 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* Style the skill headings */
+
+/*
+   Styles the h3 heading inside each skill card.
+
+   Current text:
+   - "Programming"
+   - "Engineering"
+   - "Research"
+   - "Development Tools"
+*/
 .skill-card h3 {
     margin-top: 0;
     color: #f2c94c;
 }
 
-/* Adjust text inside the skill cards */
+
+/*
+   Adjusts the spacing beneath the skill descriptions.
+
+   Current text affected:
+   - "Python, C++, HTML, and CSS"
+   - "Robotics, automation, CAD, and manufacturing"
+   - "Materials testing, lunar ISRU, and thermal-spray coatings"
+   - "Git, GitHub, VS Code, Linux, and SLURM"
+*/
 .skill-card p {
     margin-bottom: 0;
 }
 
-/* Style the résumé link as a button */
+
+/* =========================================================
+   CONTACT RÉSUMÉ BUTTON
+   ========================================================= */
+
+/*
+   Styles the résumé button in the Contact section.
+
+   Current button text:
+   "View Résumé"
+*/
 .resume-button {
     display: inline-block;
     padding: 12px 20px;
@@ -145,12 +343,31 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* Change the résumé button when hovered */
+
+/*
+   Changes the Contact section's View Résumé button
+   from gold to blue when hovered.
+*/
 .resume-button:hover {
-    background-color: #5bc0ff;
+    background-color: #fdfdfd;
 }
 
-/* Style the hero section */
+
+/* =========================================================
+   HERO / ABOUT SECTION
+   ========================================================= */
+
+/*
+   Controls the large introduction area at the top.
+
+   Current content:
+   - "ENGINEERING PORTFOLIO"
+   - "Gerardo Luna"
+   - Professional title
+   - Introductory paragraph
+   - View Projects button
+   - View Résumé button
+*/
 .hero {
     min-height: 65vh;
     display: flex;
@@ -159,7 +376,13 @@ nav a:hover {
     max-width: 900px;
 }
 
-/* Style the small label above the name */
+
+/*
+   Styles the small label above your name.
+
+   Current text:
+   "ENGINEERING PORTFOLIO"
+*/
 .hero-label {
     color: #f2c94c;
     font-weight: bold;
@@ -167,24 +390,50 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-/* Control the hero heading spacing */
+
+/*
+   Controls the spacing around your main name.
+
+   Current text:
+   "Gerardo Luna"
+*/
 .hero h1 {
     margin: 10px 0;
 }
 
-/* Style the professional title */
+
+/*
+   Styles the professional title below your name.
+
+   Current text:
+   "Mechanical Engineering Student focused on lunar
+   materials, robotics, and manufacturing"
+*/
 .hero h2 {
     max-width: 750px;
     font-size: 28px;
     line-height: 1.3;
 }
 
-/* Style the introductory paragraph */
+
+/*
+   Styles the introductory paragraph in the hero section.
+
+   Current text begins:
+   "I develop engineering projects involving lunar ISRU..."
+*/
 .hero-description {
     font-size: 18px;
 }
 
-/* Arrange the hero buttons */
+
+/*
+   Arranges the two hero buttons beside each other.
+
+   Current buttons:
+   - View Projects
+   - View Résumé
+*/
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -192,7 +441,15 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* Style both hero buttons */
+
+/*
+   Applies the same basic shape and text style
+   to both hero buttons.
+
+   Current buttons:
+   - View Projects
+   - View Résumé
+*/
 .primary-button,
 .secondary-button {
     display: inline-block;
@@ -202,54 +459,122 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Style the View Projects button */
-.primary-button {
+
+/*
+   Styles the first hero button.
+
+   Current button text:
+   "View Projects"
+*/
+.hero-buttons .primary-button {
     background-color: #f2c94c;
+    border: 2px solid #f2c94c;
     color: #061a33;
 }
 
-/* Style the View Résumé button */
-.secondary-button {
-    background-color:  #f2c94c;
+
+/*
+   Styles the second hero button to match the first.
+
+   Current button text:
+   "View Résumé"
+*/
+.hero-buttons .secondary-button {
+    background-color: #f2c94c;
+    border: 2px solid #f2c94c;
     color: #061a33;
 }
 
-/* Change the View Projects button when hovered */
-.primary-button:hover {
-    background-color: #fcfeff;
+
+/*
+   Changes the View Projects button from gold to blue
+   when the mouse is placed over it.
+*/
+.hero-buttons .primary-button:hover {
+    background-color: #5bc0ff;
+    border-color: #5bc0ff;
     color: #061a33;
 }
 
-/* Change the View Résumé button when hovered */
-.secondary-button:hover {
-    background-color: #fcfeff;
+
+/*
+   Changes the View Résumé button from gold to blue
+   when the mouse is placed over it.
+*/
+.hero-buttons .secondary-button:hover {
+    background-color: #5bc0ff;
+    border-color: #5bc0ff;
     color: #061a33;
 }
 
-/* Adjust the website for phones and small tablets */
+
+/* =========================================================
+   MOBILE DESIGN
+   ========================================================= */
+
+/*
+   These settings activate when the screen is 700 pixels
+   wide or smaller, such as on phones and small tablets.
+*/
 @media (max-width: 700px) {
+
+    /*
+       Reduces the empty space around the entire webpage
+       on smaller screens.
+    */
     body {
         padding: 20px;
     }
 
+
+    /*
+       Makes the main name smaller on mobile devices.
+
+       Current text:
+       "Gerardo Luna"
+    */
     h1 {
         font-size: 36px;
     }
 
+
+    /*
+       Places the navigation links vertically on mobile.
+
+       Current links:
+       - About
+       - Projects
+       - Skills
+       - Contact
+    */
     nav {
         flex-direction: column;
         gap: 12px;
     }
 
+
+    /*
+       Reduces the height and spacing of the hero section
+       on smaller screens.
+    */
     .hero {
         min-height: auto;
         padding: 60px 0;
     }
 
+
+    /*
+       Makes the professional title smaller on mobile.
+    */
     .hero h2 {
         font-size: 23px;
     }
 
+
+    /*
+       Allows project and skill cards to fit the width
+       of a phone screen automatically.
+    */
     .project-card,
     .skill-card {
         width: auto;
