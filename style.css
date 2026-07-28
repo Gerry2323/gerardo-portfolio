@@ -39,3 +39,22 @@ p {
 li {
     margin-bottom: 10px;
 }
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Style the navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Change the link color when the mouse is over it */
+nav a:hover {
+    color: #5bc0ff;
+}
