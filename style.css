@@ -210,19 +210,19 @@ nav a:hover {
 
 /* Style the View Résumé button */
 .secondary-button {
-    border: 2px solid #5bc0ff;
-    color: #5bc0ff;
+    background-color:  #f2c94c;
+    color: #061a33;
 }
 
 /* Change the View Projects button when hovered */
 .primary-button:hover {
-    background-color: #5bc0ff;
+    background-color: #fcfeff;
     color: #061a33;
 }
 
 /* Change the View Résumé button when hovered */
 .secondary-button:hover {
-    background-color: #5bc0ff;
+    background-color: #fcfeff;
     color: #061a33;
 }
 
