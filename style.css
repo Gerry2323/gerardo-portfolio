@@ -1,0 +1,41 @@
+/*
+   PORTFOLIO WEBSITE STYLES
+   This CSS file controls the colors, spacing, fonts,
+   and appearance of the HTML webpage.
+*/
+
+
+/*
+   The body represents all visible webpage content.
+   These settings apply to the entire page.
+*/
+/* Apply these settings to the entire webpage */
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: #061a33;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the main name heading */
+h1 {
+    color: #5bc0ff;
+    font-size: 48px;
+}
+
+/* Style the section headings */
+h2 {
+    color: #f2c94c;
+}
+
+/* Make paragraphs easier to read */
+p {
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Add space between project-list items */
+li {
+    margin-bottom: 10px;
+}
