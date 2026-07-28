@@ -136,3 +136,25 @@ section a {
 .skill-card p {
     margin-bottom: 0;
 }
+
+/* Adjust the website for phones and small tablets */
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .project-card,
+    .skill-card {
+        width: auto;
+    }
+}
