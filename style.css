@@ -215,6 +215,22 @@ nav a:hover {
     transition: transform 0.3s, border-color 0.3s;
 }
 
+/*
+   Styles the images at the top of the project cards.
+
+   Current images:
+   - VARCO lunar coating research
+   - NASA Lunabotics
+   - AgAir UAV system
+*/
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
 
 /*
    Styles the h3 title inside every project card.
