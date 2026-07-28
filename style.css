@@ -109,3 +109,30 @@ section a {
     font-size: 14px;
     font-weight: bold;
 }
+
+/* Arrange the skill cards */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style each skill card */
+.skill-card {
+    width: 220px;
+    padding: 20px;
+    background-color: #0d2b4d;
+    border-left: 4px solid #5bc0ff;
+    border-radius: 8px;
+}
+
+/* Style the skill headings */
+.skill-card h3 {
+    margin-top: 0;
+    color: #f2c94c;
+}
+
+/* Adjust the text inside the skill cards */
+.skill-card p {
+    margin-bottom: 0;
+}
