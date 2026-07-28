@@ -158,3 +158,19 @@ section a {
         width: auto;
     }
 }
+
+/* Style the résumé link as a button */
+.resume-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #f2c94c;
+    color: #061a33;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Change the résumé button when hovered */
+.resume-button:hover {
+    background-color: #5bc0ff;
+}
