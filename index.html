@@ -22,176 +22,247 @@
 
     <!-- Navigation bar -->
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+     
+    
+    <!-- Opens the main page -->
+    <a href="index.html">Home</a>
+
+    <!-- Opens the separate About page -->
+    <a href="about.html">About</a>
+
+    <!-- Opens the separate Projects page -->
+    <a href="projects.html">Projects</a>
+
+    <!-- Opens the separate Skills page -->
+    <a href="skills.html">Skills</a>
+
+    <!-- Opens the separate Contact page -->
+    <a href="contact.html">Contact</a>
+
+
+
     </nav>
 
-    
+
     <!-- Hero and About section -->
-<section id="about" class="hero">
-    <p class="hero-label">ENGINEERING PORTFOLIO</p>
+    <section id="about" class="hero">
 
-    <h1>Gerardo Luna</h1>
+        <p class="hero-label">
+            ENGINEERING PORTFOLIO
+        </p>
 
-    <h2>
-        Mechanical Engineering Student
-        focused on lunar materials, robotics, and manufacturing
-    </h2>
+        <h1>Gerardo Luna</h1>
 
-    <p class="hero-description">
-        I develop engineering projects involving lunar ISRU,
-        advanced coatings, robotic systems, automation, and programming.
-    </p>
+        <h2>
+            Mechanical Engineering Student focused on lunar materials,
+            robotics, and manufacturing
+        </h2>
 
-    <div class="hero-buttons">
-        <a class="primary-button" href="#projects">
-            View Projects
-        </a>
+        <p class="hero-description">
+            I develop engineering projects involving lunar ISRU,
+            advanced coatings, robotic systems, automation, and programming.
+        </p>
 
-        <a class="secondary-button"
-           href="Gerardo-Luna-Resume.pdf"
-           target="_blank">
-            View Résumé
-        </a>
-    </div>
+        <!-- Hero buttons -->
+        <div class="hero-buttons">
+
+            <!-- Opens the separate Projects page -->
+            <a class="primary-button" href="projects.html">
+                View Projects
+            </a>
+
+            <!-- Opens the résumé in a new tab -->
+            <a
+                class="secondary-button"
+                href="Gerardo-Luna-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Résumé
+            </a>
+
+        </div>
 
     </section>
+
 
     <!-- Projects section -->
-    
-<section id="projects">
-    <h2>Featured Projects</h2>
+    <section id="projects">
 
-    <!-- Holds all three project cards -->
-    <div class="project-container">
+        <h2>Featured Projects</h2>
 
-        <!-- VARCO project card -->
-        <article class="project-card">
+        <!-- Holds all three project cards -->
+        <div class="project-container">
 
-            <!-- VARCO project image -->
-            <img
-                class="project-image"
-                src="images/varco.jpg"
-                alt="VARCO lunar coating research project">
 
-            <h3>VARCO Lunar Coating Research</h3>
+            <!-- VARCO project card -->
+            <article class="project-card">
 
-            <p>
-                Researching lunar regolith and ceramic composite coatings
-                for protecting equipment and infrastructure on the Moon.
-            </p>
+                <img
+                    class="project-image"
+                    src="images/varco.jpg"
+                    alt="VARCO lunar coating research project">
 
-            <p class="project-skills">
-                Materials Research • Vacuum Plasma Spray • Python
-            </p>
-        </article>
+                <h3>VARCO Lunar Coating Research</h3>
 
-        <!-- Lunabotics project card -->
-        <article class="project-card">
+                <p>
+                    Researching lunar regolith and ceramic composite coatings
+                    for protecting equipment and infrastructure on the Moon.
+                </p>
 
-            <!-- Lunabotics project image -->
-            <img
-                class="project-image"
-                src="images/lunabotics.jpg"
-                alt="NASA Lunabotics robotic excavation project">
+                <!-- Opens the detailed VARCO project page -->
+                <a class="project-link" href="projects/varco.html">
+                    View Project Details →
+                </a>
 
-            <h3>NASA Lunabotics</h3>
+                <p class="project-skills">
+                    Materials Research • Vacuum Plasma Spray • Python
+                </p>
 
-            <p>
-                Led the development of a robotic excavation system designed
-                to collect and move simulated lunar regolith.
-            </p>
+            </article>
 
-            <p class="project-skills">
-                Robotics • Mechanical Design • Project Management
-            </p>
-        </article>
 
-        <!-- AgAir project card -->
-        <article class="project-card">
+            <!-- Lunabotics project card -->
+            <article class="project-card">
 
-            <!-- AgAir project image -->
-            <img
-                class="project-image"
-                src="images/agair.jpg"
-                alt="AgAir UAV soil analysis project">
+                <img
+                    class="project-image"
+                    src="images/lunabotics.jpg"
+                    alt="NASA Lunabotics robotic excavation project">
 
-            <h3>AgAir UAV System</h3>
+                <h3>NASA Lunabotics</h3>
 
-            <p>
-                Developed a UAV concept for analyzing agricultural soil
-                and deploying targeted soil-remediation materials.
-            </p>
+                <p>
+                    Led the development of a robotic excavation system designed
+                    to collect and move simulated lunar regolith.
+                </p>
 
-            <p class="project-skills">
-                UAV Systems • Sensors • Systems Engineering
-            </p>
-        </article>
+                <p class="project-skills">
+                    Robotics • Mechanical Design • Project Management
+                </p>
 
-    </div>
-</section>
+            </article>
+
+
+            <!-- AgAir project card -->
+            <article class="project-card">
+
+                <img
+                    class="project-image"
+                    src="images/agair.jpg"
+                    alt="AgAir UAV soil analysis project">
+
+                <h3>AgAir UAV System</h3>
+
+                <p>
+                    Developed a UAV concept for analyzing agricultural soil
+                    and deploying targeted soil-remediation materials.
+                </p>
+
+                <p class="project-skills">
+                    UAV Systems • Sensors • Systems Engineering
+                </p>
+
+            </article>
+
+        </div>
+
     </section>
+
 
     <!-- Skills section -->
     <section id="skills">
+
         <h2>Technical Skills</h2>
 
         <!-- Holds all four skill cards -->
         <div class="skills-container">
 
+
+            <!-- Programming skills -->
             <div class="skill-card">
+
                 <h3>Programming</h3>
-                <p>Python, C++, HTML, and CSS</p>
+
+                <p>
+                    Python, C++, HTML, and CSS
+                </p>
+
             </div>
 
+
+            <!-- Engineering skills -->
             <div class="skill-card">
+
                 <h3>Engineering</h3>
-                <p>Robotics, automation, CAD, and manufacturing</p>
+
+                <p>
+                    Robotics, automation, CAD, and manufacturing
+                </p>
+
             </div>
 
+
+            <!-- Research skills -->
             <div class="skill-card">
+
                 <h3>Research</h3>
+
                 <p>
                     Materials testing, lunar ISRU,
                     and thermal-spray coatings
                 </p>
+
             </div>
 
+
+            <!-- Development tools -->
             <div class="skill-card">
+
                 <h3>Development Tools</h3>
-                <p>Git, GitHub, VS Code, Linux, and SLURM</p>
+
+                <p>
+                    Git, GitHub, VS Code, Linux, and SLURM
+                </p>
+
             </div>
 
         </div>
+
     </section>
 
+
     <!-- Contact section -->
-    
-<section id="contact">
-    <h2>Contact</h2>
+    <section id="contact">
 
-    <p>
-        Email:
-        <a href="mailto:Gerardo.J.Luna@outlook.com">
-            Gerardo.J.Luna@outlook.com
-        </a>
-    </p>
+        <h2>Contact</h2>
 
-    <p>
-        <a href="https://github.com/Gerry2323" target="_blank">
-            GitHub
-        </a>
-        |
-        <a href="https://www.linkedin.com/in/gerardo-l-351691195"
-           target="_blank">
-            LinkedIn
-        </a>
-    </p>
+        <!-- Email address -->
+        <p>
+            Email:
 
-    <p>
-    
+            <a href="mailto:Gerardo.J.Luna@outlook.com">
+                Gerardo.J.Luna@outlook.com
+            </a>
+        </p>
+
+        <!-- Professional links -->
+        <p>
+            <a
+                href="https://github.com/Gerry2323"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            |
+
+            <a
+                href="https://www.linkedin.com/in/gerardo-l-351691195"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        </p>
 
     </section>
 

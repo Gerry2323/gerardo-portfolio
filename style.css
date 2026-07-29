@@ -525,6 +525,64 @@ nav a:hover {
 
 
 /* =========================================================
+   INDIVIDUAL PROJECT PAGES
+   Current page affected:
+   - projects/varco.html
+   ========================================================= */
+
+/*
+   Controls the width of the main project-page content
+   and centers it on the screen.
+*/
+.project-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/*
+   Controls the introductory section of a project page.
+
+   Current VARCO content:
+   - Project label
+   - Project title
+   - Project subtitle
+   - Summary
+   - Main project image
+*/
+.project-header {
+    padding-top: 40px;
+}
+
+
+/*
+   Styles the short summary beneath the project title.
+
+   Current text begins:
+   "VARCO investigates how lunar regolith..."
+*/
+.project-summary {
+    max-width: 850px;
+    font-size: 19px;
+}
+
+
+/*
+   Styles the large image on the VARCO project page.
+*/
+.project-page-image {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #245987;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
    MOBILE DESIGN
    ========================================================= */
 
@@ -595,4 +653,22 @@ nav a:hover {
     .skill-card {
         width: auto;
     }
+}
+
+/*
+   Styles the link that opens a detailed project page.
+
+   Current text:
+   "View Project Details →"
+*/
+.project-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #5bc0ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #f2c94c;
 }
