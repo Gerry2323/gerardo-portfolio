@@ -1,6 +1,6 @@
 /*
    GERARDO LUNA ENGINEERING PORTFOLIO
-   Cleaned and organized stylesheet
+   Complete stylesheet
 */
 
 
@@ -26,9 +26,15 @@
 }
 
 
-/* Smooth scrolling when opening page sections */
+/*
+   Smooth scrolling.
+
+   The scroll padding prevents section headings from being
+   hidden behind the sticky navigation.
+*/
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 75px;
 }
 
 
@@ -92,7 +98,12 @@ section {
    SHARED PAGE WIDTH
    ========================================================= */
 
-nav,
+/*
+   Keep the main content and footer centered.
+
+   Navigation is not included because it needs to stretch
+   across the entire screen.
+*/
 main,
 footer {
     width: min(calc(100% - 64px), var(--page-width));
@@ -102,28 +113,55 @@ footer {
 
 
 /* =========================================================
-   NAVIGATION
+   STICKY NAVIGATION
    ========================================================= */
 
+/*
+   The navigation stays at the very top while scrolling.
+
+   It is rectangular, solid, and stretches across
+   the entire browser window.
+*/
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(24px, 4vw, 50px);
-    min-height: 92px;
-    padding: 20px 0;
+    gap: clamp(22px, 4vw, 50px);
+
+    width: 100%;
+    min-height: 58px;
+    margin: 0;
+    padding: 10px 24px;
+
+    /* Solid background prevents page content from showing through */
+    background-color: #0d2b4d;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    border-left: none;
+    border-radius: 0;
+
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.28);
 }
 
 
+/* Navigation links */
 nav a {
     color: var(--white);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: none;
+
     transition: color 0.2s ease;
 }
 
 
+/* Navigation hover and keyboard effect */
 nav a:hover,
 nav a:focus-visible {
     color: var(--blue);
@@ -140,6 +178,7 @@ nav a:focus-visible {
     justify-content: center;
     align-items: center;
     gap: clamp(50px, 7vw, 90px);
+
     min-height: 620px;
     padding: 55px 0 75px;
 }
@@ -148,14 +187,18 @@ nav a:focus-visible {
 /* Headshot on the left side */
 .headshot {
     display: block;
+    justify-self: center;
+
     width: 300px;
     height: 300px;
     margin: 0;
-    justify-self: center;
+
     object-fit: cover;
     object-position: center;
+
     border: 4px solid var(--blue);
     border-radius: 50%;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -168,6 +211,7 @@ nav a:focus-visible {
 }
 
 
+/* Small text above the main name */
 .hero-label {
     margin: 0 0 18px;
     color: var(--gold);
@@ -176,19 +220,23 @@ nav a:focus-visible {
 }
 
 
+/* Main name heading */
 .hero h1 {
     margin-bottom: 24px;
 }
 
 
+/* Engineering description heading */
 .hero h2 {
     max-width: 650px;
     margin: 0 0 24px;
+
     font-size: clamp(24px, 2.5vw, 32px);
     line-height: 1.3;
 }
 
 
+/* Introduction paragraph */
 .hero-description {
     max-width: 650px;
     margin: 0;
@@ -196,7 +244,7 @@ nav a:focus-visible {
 }
 
 
-/* Hero buttons */
+/* Hero buttons container */
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -205,17 +253,22 @@ nav a:focus-visible {
 }
 
 
+/* Hero buttons */
 .primary-button,
 .secondary-button,
 .resume-button {
     display: inline-block;
     padding: 12px 20px;
+
     background-color: var(--gold);
     color: var(--background);
+
     border: 2px solid var(--gold);
     border-radius: 6px;
+
     font-weight: bold;
     text-decoration: none;
+
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
@@ -223,12 +276,14 @@ nav a:focus-visible {
 }
 
 
+/* Hero button hover effect */
 .primary-button:hover,
 .secondary-button:hover,
 .resume-button:hover {
     background-color: var(--white);
     border-color: var(--white);
     color: var(--background);
+
     transform: translateY(-2px);
 }
 
@@ -246,6 +301,7 @@ nav a:focus-visible {
 }
 
 
+/* Featured Projects and Technical Skills headings */
 #projects > h2,
 #skills > h2 {
     margin: 0 0 30px;
@@ -265,6 +321,7 @@ nav a:focus-visible {
 .project-card {
     display: flex;
     flex-direction: column;
+
     min-width: 0;
     padding: 25px;
 
@@ -284,15 +341,16 @@ nav a:focus-visible {
 }
 
 
-/* Hovering anywhere on the card activates this effect */
+/* Hovering anywhere over the card activates this effect */
 .project-card:hover {
     transform: translateY(-6px);
+
     border-color: var(--gold);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 
-/* Visible outline for keyboard users */
+/* Visible outline when using a keyboard */
 .project-card:focus-visible {
     outline: 3px solid var(--gold);
     outline-offset: 4px;
@@ -304,6 +362,7 @@ nav a:focus-visible {
     width: 100%;
     height: 180px;
     margin-bottom: 20px;
+
     object-fit: cover;
     border-radius: 6px;
 }
@@ -327,21 +386,23 @@ nav a:focus-visible {
 .project-link {
     display: inline-block;
     margin: auto 0 15px;
+
     color: var(--blue);
     font-weight: bold;
 }
 
 
-/* Change details text when hovering anywhere on the card */
+/* Change details text when hovering over the card */
 .project-card:hover .project-link {
     color: var(--gold);
 }
 
 
-/* Skills shown at the bottom of each card */
+/* Skills displayed at the bottom of each project card */
 .project-card .project-skills {
     margin-bottom: 0;
     color: var(--gold);
+
     font-size: 14px;
     font-weight: bold;
 }
@@ -359,21 +420,26 @@ nav a:focus-visible {
 }
 
 
+/* Individual skill card */
 .skill-card {
     min-width: 0;
     padding: 22px;
+
     background-color: var(--card-background);
+
     border-left: 4px solid var(--blue);
     border-radius: 8px;
 }
 
 
+/* Skill category heading */
 .skill-card h3 {
     margin: 0 0 12px;
     color: var(--gold);
 }
 
 
+/* Skill description */
 .skill-card p {
     margin: 0;
 }
@@ -389,36 +455,44 @@ nav a:focus-visible {
 }
 
 
+/* Top of an individual project page */
 .project-header {
     padding-top: 40px;
 }
 
 
+/* Project introduction */
 .project-summary {
     max-width: 850px;
     font-size: 19px;
 }
 
 
+/* Large image on an individual project page */
 .project-page-image,
 .project-page .project-header .project-image {
     display: block;
+
     width: 100%;
     max-width: 900px;
     height: min(450px, 50vw);
     min-height: 280px;
     margin-top: 30px;
+
     object-fit: cover;
+
     border: 1px solid var(--border);
     border-radius: 10px;
 }
 
 
+/* Width of sections on project pages */
 .project-page section {
     max-width: 900px;
 }
 
 
+/* Width of paragraphs on project pages */
 .project-page section p {
     max-width: 850px;
 }
@@ -434,26 +508,32 @@ footer {
 }
 
 
+/* Footer heading */
 footer h2 {
     margin: 0 0 22px;
 }
 
 
+/* Footer paragraphs */
 footer p {
     max-width: none;
 }
 
 
+/* Footer links */
 footer a {
     color: var(--blue);
 }
 
 
+/* Copyright line */
 .copyright {
     margin-top: 40px;
     padding-top: 24px;
+
     color: var(--muted-text);
     border-top: 1px solid rgba(91, 192, 255, 0.3);
+
     font-size: 14px;
 }
 
@@ -477,6 +557,7 @@ footer a {
     }
 
 
+    /* Change projects and skills to two columns */
     .project-container,
     .skills-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -491,26 +572,53 @@ footer a {
 
 @media (max-width: 700px) {
 
-    nav,
+    /* Reduce the empty space beside the page content */
     main,
     footer {
-        width: min(calc(100% - 36px), var(--page-width));
+        width: calc(100% - 36px);
     }
 
 
+    /*
+       Thin mobile navigation.
+
+       It remains rectangular, touches the top,
+       and stretches across the entire screen.
+    */
     nav {
-        flex-wrap: wrap;
-        gap: 15px 24px;
-        min-height: auto;
-        padding: 25px 0;
+        top: 0;
+
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        gap: 8px;
+
+        width: 100%;
+        min-height: 50px;
+        margin: 0;
+        padding: 8px 6px;
+
+        background-color: #0d2b4d;
+        border-radius: 0;
+
+        overflow-x: auto;
+        scrollbar-width: none;
     }
 
 
+    /* Hide the horizontal navigation scrollbar */
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* Smaller navigation links on phones */
     nav a {
-        font-size: 16px;
+        flex-shrink: 0;
+        font-size: 14px;
     }
 
 
+    /* Reduce space between phone sections */
     section {
         margin-bottom: 45px;
     }
@@ -520,46 +628,54 @@ footer a {
     .hero {
         display: flex;
         flex-direction: column;
+
         min-height: auto;
         gap: 35px;
         padding: 45px 0 60px;
     }
 
 
+    /* Smaller phone headshot */
     .headshot {
         width: 210px;
         height: 210px;
     }
 
 
+    /* Center the hero content on phones */
     .hero-content {
         align-items: center;
         text-align: center;
     }
 
 
+    /* Smaller name heading on phones */
     .hero h1 {
         font-size: 44px;
     }
 
 
+    /* Center the hero buttons */
     .hero-buttons {
         justify-content: center;
     }
 
 
+    /* Reduce project and skill section padding */
     #projects,
     #skills {
         padding: 25px 0;
     }
 
 
+    /* Use one project or skill card per row */
     .project-container,
     .skills-container {
         grid-template-columns: 1fr;
     }
 
 
+    /* Project-page image size on phones */
     .project-page-image,
     .project-page .project-header .project-image {
         height: 280px;
@@ -567,6 +683,7 @@ footer a {
     }
 
 
+    /* Reduce footer spacing */
     footer {
         padding-top: 45px;
     }
